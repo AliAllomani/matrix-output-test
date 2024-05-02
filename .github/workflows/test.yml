@@ -47,7 +47,7 @@ jobs:
         run: |
           echo "${{ steps.read.outputs.result }}"
       - name: X1
-        if: ${{ contains(fromJSON(steps.read.outputs.result)[x], 'success') }}
+        if: ${{ contains(fromJSON(steps.read.outputs.result)['x'], 'success') }}
         run: |
           echo "X1"
 
